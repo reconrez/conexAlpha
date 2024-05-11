@@ -45,6 +45,10 @@ app.use("/api", discussionRoutes);
 app.use("/api", userRoutes);
 app.use("/testing", testRoutes);
 
+app.get('/api/test', (req, res) => {
+  res.send("Test route works");
+});
+
 // catch 404 and forward to error handler
 app.all(/.*/, (req, res) => {
   res.statusCode = 404;
